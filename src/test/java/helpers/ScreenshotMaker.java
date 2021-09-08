@@ -18,10 +18,10 @@ public class ScreenshotMaker {
         screenshotMaker = new AShot().takeScreenshot(driver);
     }
 
-    public void MakeAScreenshot(String format, String path) {
+    public void MakeAScreenshot(String format, String name) {
         try {
-            ImageIO.write(screenshotMaker.getImage(), format, new File(path));
-            logger.info("Скриншот сохранен в " + path);
+            ImageIO.write(screenshotMaker.getImage(), format, new File("temp\\" + name + "." + format));
+            logger.info("Скриншот сохранен в [temp/" + name + "." + format + "]");
         } catch (IOException e) {
             e.printStackTrace();
         }
