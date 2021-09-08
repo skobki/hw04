@@ -4,7 +4,7 @@ import helpers.WaitFor;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class Button extends BaseElement{
+public class Button extends BaseElement {
     // Конструктор
     public Button(WebDriver driver, By by) {
         super(driver, by);
