@@ -13,11 +13,11 @@ public class StartPageWithElements extends BasePage{
 
     //----Локаторы----
     //"Да" на всплывающем окне
-    String linkYesXpath = "//a[contains(text(), \"Да\"]";
+    String linkYesXpath = "//a[contains(text(), \"Да\")]";
     //Ссылка "ТВ и мультимедиа"
     String linkTVAndMultimediaXpath = "(//a[contains(text(), \"ТВ и мультимедиа\")])[1]";
     //Ссылка "Телевизоры"
-    String linkTVXpath = "(//a[contains(text(), \"Телевизоры\")])[2]/following::div/a";
+    String linkTVXpath = "(//a[contains(text(), \"Телевизоры\")])[2]";
 
     //Конструктор класса
     public StartPageWithElements(WebDriver driver) {

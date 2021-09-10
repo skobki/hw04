@@ -1,5 +1,6 @@
 package pages;
 
+import helpers.ScreenshotMaker;
 import helpers.JSExec;
 import helpers.WaitFor;
 import org.openqa.selenium.WebDriver;

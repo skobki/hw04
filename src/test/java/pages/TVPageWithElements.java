@@ -27,8 +27,8 @@ public class TVPageWithElements extends BasePage {
     String checkBoxFrequencyXpath = "//span[contains(text(), \"frequency\")]";
     //Диагональ
     String accordeonDiagonalXpath = "//div[@class=\"ui-collapse ui-collapse_list\"]//span[contains(text(), \"Диагональ экрана (дюйм)\")]";
-    String textBoxMinDiagonalXpath = "//div[@class=\"ui-input-small__input ui-input-small__input_list\"]//input[@placeholder='от 22']";
-    String textBoxMaxDiagonalXpath = "//div[@class=\"ui-input-small__input ui-input-small__input_list\"]//input[@placeholder='до 88']";
+    String textBoxMinDiagonalXpath = "//input[@placeholder=\"от 22\"]";
+    String textBoxMaxDiagonalXpath = "//input[@placeholder=\"до 100\"]";
     //Тип подсветки экрана
     String accordeonLedTypeXpath = "//div[@class=\"ui-list-controls ui-collapse ui-collapse_list\"]//span[contains(text(), \"Тип подсветки экрана\")]";
     String checkBoxLedTypeXpath = "//span[contains(text(), \"ledType\")]";
@@ -105,7 +105,7 @@ public class TVPageWithElements extends BasePage {
         logger.info("Отображены значения фильтра \"Диагональ экрана\"");
     }
     public void checkBoxLedTypeClick(String ledType) {
-        checkBoxLedTypeXpath = checkBoxLedTypeXpath.replace("ledtype", ledType);
+        checkBoxLedTypeXpath = checkBoxLedTypeXpath.replace("ledType", ledType);
         CheckBox checkBoxLedType = new CheckBox(driver, By.xpath(checkBoxLedTypeXpath));
         checkBoxLedType.setChecked(true);
         logger.info("Установлен фильтр \"Тип подсветки экрана\" - " + ledType);
@@ -120,7 +120,7 @@ public class TVPageWithElements extends BasePage {
     public void linkFirstProductClick(String product) {
         WaitFor.firstProductMustBe(By.xpath(linkFirstProductXpath), product);
         Link linkProduct = new Link(driver, By.xpath(linkFirstProductXpath));
-        linkProduct.openInNewWindow();
+        linkProduct.click();
         logger.info("Нажата ссылка первого продукта в списке");
     }
 }

@@ -10,7 +10,7 @@ public class MinDiagonal implements Serializable {
     }
 
     public MinDiagonal(int minDiagonal) {
-        if (minDiagonal >= 22 && minDiagonal <= 88) {
+        if (minDiagonal >= 22 && minDiagonal <= 100) {
             this.minDiagonal = minDiagonal;
         } else {
             throw new IllegalArgumentException("Минимальная диагональ должна быть больше 22 и меньше 88");

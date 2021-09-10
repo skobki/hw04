@@ -1,5 +1,6 @@
 package facadeSteps;
 
+import helpers.ScreenshotMaker;
 import helpers.JSExec;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -19,7 +20,7 @@ public class TVProductPageSteps {
     }
 
     public void specificationsClick() {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvProductPage.specificationsLinkClick();
     }
 

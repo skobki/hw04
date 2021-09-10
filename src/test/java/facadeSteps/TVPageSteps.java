@@ -1,5 +1,6 @@
 package facadeSteps;
 
+import helpers.ScreenshotMaker;
 import helpers.JSExec;
 import models.valueObjects.*;
 import org.apache.logging.log4j.LogManager;
@@ -22,36 +23,36 @@ public class TVPageSteps {
     }
 
     public void filterByCompany(Company company) {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvPage.checkBoxCompanyClick(company.getCompany());
     }
 
     public void filterByDiagonal(MinDiagonal minDiagonal, MaxDiagonal maxDiagonal) {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvPage.accordeonDiagonalClick();
         tvPage.textBoxMinDiagonalSetValue(minDiagonal.getMinDiagonal());
         tvPage.textBoxMaxDiagonalSetValue(maxDiagonal.getMaxDiagonal());
     }
 
     public void filterByFrequency(Frequency frequency) {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvPage.accordeonFrequencyClick();
         tvPage.checkBoxFrequencyClick(frequency.getFrequency() + " Гц");
     }
 
     public void filterByLedType(LEDType ledType) {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvPage.accordeonLedTypeClick();
         tvPage.checkBoxLedTypeClick(ledType.getLedType());
     }
 
     public void clickButtonApply() {
-        JSExec.scrollBy(0, 300);
+        JSExec.scrollBy(0, 500);
         tvPage.buttonApplyClick();
     }
 
-    public void firstProductClick() {
+    public void firstProductClick(String product) {
         JSExec.scrollBy(0, -2000);
-        tvPage.linkFirstProductClick("Телевизор LED Samsung UE75AU8000UXRU черный");
+        tvPage.linkFirstProductClick(product);
     }
 }

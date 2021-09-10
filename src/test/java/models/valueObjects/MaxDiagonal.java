@@ -7,7 +7,7 @@ public class MaxDiagonal {
 
     }
     public MaxDiagonal(int maxDiagonal) {
-        if (maxDiagonal >= 22 && maxDiagonal <= 88) {
+        if (maxDiagonal >= 22 && maxDiagonal <= 100) {
             this.maxDiagonal = maxDiagonal;
         } else {
             throw new IllegalArgumentException("Максимальная диагональ должна быть больше 22 и меньше 88");
